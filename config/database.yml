@@ -19,5 +19,5 @@ production:
   encoding: unicode
   database: rorexpert_production
   pool: 5
-  username: rorexpert
-  password: 
+  username: "postgres"
+  password: "vijay123"
