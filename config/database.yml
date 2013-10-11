@@ -17,7 +17,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: mvsr_production
+  database: rorexpert_production
   pool: 5
-  username: "postgres"
-  password: "vijay123"
+  username: rorexpert
+  password: 
