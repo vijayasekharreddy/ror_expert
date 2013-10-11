@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RorExpert</title>
+  <title>M.vijayasekhar reddy: RoR Expert</title>
+    <META NAME="keywords" content=" Ruby on Rails , Ruby, ROR examples, ajax, mysql, ROR tutorials, free scripts, bugs">
+<META NAME="Description" CONTENT="Ruby on Rails Experts Forum is an online community for expert Ruby on Rails (RoR) developers. Free scripts, Tutorials, Bugs & Fixed are available here. AJAX, MySQL and all major open souce content management systems are discussed here.">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">RoR Blog</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li><%= link_to "Browse Topics" %></li>
+            <li><%= link_to "Post Topic" %></li>
+            <li><%= link_to "Contact Us" %></li>
+            <li>
+            <% if user_signed_in? %>
+				<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+			<% else %>
+				<%= link_to "Signin", new_user_session_path%> 	
+			<% end %>
+			</li>
+			<li><%= link_to "Sign up", new_registration_path(resource_name) %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<%= yield %>
-
+  <div class="container">
+    <div class="row">
+      <div class="span9"><%= yield %></div>
+      <div class="span3">
+        <h2>About Me</h2>
+        I am a full stack Ruby on Rail developer from the past 6 years. Ruby on Rails Experts Forum is an online community for expert Ruby on Rails (RoR) developers. Free scripts, Tutorials, Bugs & Fixed are available here. AJAX, MySQL and all major open souce content management systems are discussed here.
+      </div>
+      <div class="span3">
+        <h3>Rails Documentation</h3>
+        <ul class="nav">
+        	<li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+			<li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+			<li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
+			<li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
+		</ul>
+	 </div>	
+  </div>
 </body>
 </html>
