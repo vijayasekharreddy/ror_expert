@@ -4,7 +4,7 @@ development:
   database: mvsr_development
   pool: 5
   username: "postgres"
-  password: "vijay123"
+  password: "postgres"
 
 test:
   adapter: postgresql
@@ -12,7 +12,7 @@ test:
   database: mvsr_test
   pool: 5
   username: "postgres"
-  password: "vijay123"
+  password: "postgres"
 
 production:
   adapter: postgresql
